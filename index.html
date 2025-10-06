@@ -33,7 +33,6 @@
             --tooltip-bg: hsl(210, 10%, 20%);
             --tooltip-text: #ffffff;
         }
-        
         [data-theme="dark"] {
             --primary-color: hsl(var(--primary-hue), 70%, 60%);
             --primary-color-dark: hsl(var(--primary-hue), 70%, 50%);
@@ -50,7 +49,6 @@
             --tooltip-bg: hsl(210, 10%, 80%);
             --tooltip-text: hsl(210, 10%, 20%);
         }
-        
         body {
             font-family: 'Inter', sans-serif;
             background: var(--bg-body);
@@ -66,7 +64,6 @@
             -moz-osx-font-smoothing: grayscale;
             transition: background var(--transition-speed) ease;
         }
-        
         .container {
             max-width: 1200px;
             width: 100%;
@@ -79,14 +76,12 @@
             position: relative;
             transition: all var(--transition-speed) ease;
         }
-        
         header {
             text-align: center;
             margin-bottom: 40px;
             padding-bottom: 25px;
             border-bottom: 1px solid var(--border-color);
         }
-        
         h1 {
             color: var(--text-heading);
             font-weight: 700;
@@ -96,7 +91,6 @@
             position: relative;
             display: inline-block;
         }
-        
         h1::after {
             content: '';
             position: absolute;
@@ -108,7 +102,6 @@
             background: var(--primary-color);
             border-radius: 2px;
         }
-        
         p.subtitle {
             color: var(--text-light);
             font-size: 1.1em;
@@ -120,7 +113,6 @@
             gap: 15px;
             font-weight: 500;
         }
-        
         #profile-name { 
             font-weight: 600; 
             color: var(--primary-color-dark);
@@ -130,12 +122,10 @@
             position: relative;
             transition: all var(--transition-speed) ease;
         }
-        
         #profile-name:hover {
             background-color: hsla(var(--primary-hue), 70%, 55%, 0.2);
             transform: translateY(-1px);
         }
-        
         h2 {
             text-align: center;
             color: var(--text-heading);
@@ -146,7 +136,6 @@
             letter-spacing: -0.02em;
             position: relative;
         }
-        
         h2::after {
             content: '';
             position: absolute;
@@ -158,7 +147,6 @@
             background: var(--primary-color);
             border-radius: 1.5px;
         }
-        
         /* Панель кнопок */
         .admin-controls {
             position: fixed;
@@ -169,7 +157,6 @@
             gap: 12px;
             z-index: 1000;
         }
-        
         .admin-controls button {
             padding: 12px 18px;
             background-color: var(--bg-card);
@@ -188,7 +175,6 @@
             position: relative;
             overflow: hidden;
         }
-        
         .admin-controls button::before {
             content: '';
             position: absolute;
@@ -199,20 +185,16 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
             transform: translateX(-100%);
         }
-        
         .admin-controls button:hover {
             background-color: hsl(210, 20%, 98%);
             transform: translateY(-3px) scale(1.02);
             box-shadow: var(--shadow-md);
             color: var(--primary-color-dark);
         }
-        
         .admin-controls button:hover::before {
             animation: shine 1.5s;
         }
-        
         .admin-controls button:hover i { color: var(--primary-color); }
-        
         .admin-controls button.theme-toggle {
             border-radius: 50%;
             width: 48px;
@@ -221,16 +203,13 @@
             justify-content: center;
             align-items: center;
         }
-        
         .admin-controls button.theme-toggle i {
             margin: 0;
             font-size: 1.2em;
         }
-        
         .admin-controls button.theme-toggle.dark-mode i {
             color: #FFD700;
         }
-        
         /* Админ-панель и формы */
         .admin-panel {
             background-color: var(--bg-admin-panel);
@@ -242,12 +221,10 @@
             display: none;
             transition: all var(--transition-speed) ease;
         }
-        
         .admin-panel.visible { 
             display: block;
             animation: fadeIn 0.4s ease;
         }
-        
         .admin-panel h3 { 
             margin-top: 0; 
             font-size: 1.6em; 
@@ -257,7 +234,6 @@
             margin-bottom: 25px;
             position: relative;
         }
-        
         .admin-panel h3::after {
             content: '';
             position: absolute;
@@ -269,18 +245,15 @@
             background: var(--primary-color);
             border-radius: 1px;
         }
-        
         .form-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
-        
         .form-grid.single-col { 
             grid-template-columns: 1fr; 
         }
-        
         .form-grid label { 
             display: block; 
             margin-bottom: 8px; 
@@ -291,12 +264,10 @@
             align-items: center;
             gap: 5px;
         }
-        
         .form-grid label i {
             color: var(--primary-color);
             font-size: 0.9em;
         }
-        
         .form-grid input, .form-grid select {
             width: 100%;
             padding: 12px 15px;
@@ -309,22 +280,18 @@
             color: var(--text-body);
             position: relative;
         }
-        
         .form-grid input::placeholder { 
             color: var(--text-light); 
         }
-        
         .form-grid input:focus, .form-grid select:focus {
             border-color: var(--primary-color);
             outline: none;
             box-shadow: 0 0 0 3px hsla(var(--primary-hue), 70%, 55%, 0.2);
             background-color: #fcfdff;
         }
-        
         .form-grid .full-width { 
             grid-column: 1 / -1; 
         }
-        
         .form-grid button {
             background-color: var(--primary-color);
             color: white;
@@ -340,7 +307,6 @@
             position: relative;
             overflow: hidden;
         }
-        
         .form-grid button::before {
             content: '';
             position: absolute;
@@ -351,17 +317,14 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: 0.6s;
         }
-        
         .form-grid button:hover::before {
             left: 100%;
         }
-        
         .form-grid button:hover { 
             background-color: var(--primary-color-dark); 
             transform: translateY(-2px); 
             box-shadow: var(--shadow-lg); 
         }
-        
         /* Прогресс-бар для проектов */
         .project-progress {
             width: 100%;
@@ -372,7 +335,6 @@
             overflow: hidden;
             position: relative;
         }
-        
         .progress-bar {
             height: 100%;
             background: linear-gradient(90deg, var(--primary-color), var(--primary-color-dark));
@@ -380,14 +342,12 @@
             width: 0%;
             transition: width 0.5s ease;
         }
-        
         /* Стили для карточек */
         .project-list {
             display: grid;
             gap: 25px;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         }
-        
         .project-card {
             background-color: var(--bg-card);
             padding: 25px;
@@ -404,17 +364,14 @@
             transform: translateY(20px);
             animation: fadeInUp 0.4s forwards;
         }
-        
         .project-card:nth-child(1) { animation-delay: 0.05s; }
         .project-card:nth-child(2) { animation-delay: 0.1s; }
         .project-card:nth-child(3) { animation-delay: 0.15s; }
         .project-card:nth-child(4) { animation-delay: 0.2s; }
-        
         .project-card:hover { 
             transform: translateY(-5px); 
             box-shadow: var(--shadow-lg); 
         }
-        
         .project-card::before {
             content: '';
             position: absolute;
@@ -427,17 +384,14 @@
             transition: opacity 0.3s ease;
             pointer-events: none;
         }
-        
         .project-card:hover::before { 
             opacity: 1; 
         }
-        
         /* Статусы карточек */
         .project-card.status-в-работе { border-left-color: hsl(200, 70%, 50%); } /* Blue */
         .project-card.status-на-проверке { border-left-color: hsl(40, 90%, 60%); } /* Orange */
         .project-card.status-на-паузе { border-left-color: hsl(0, 70%, 60%); }    /* Red */
         .project-card.status-завершено { border-left-color: var(--accent-color); } /* Green */
-        
         .card-header { 
             display: flex; 
             justify-content: space-between; 
@@ -445,7 +399,6 @@
             margin-bottom: 18px; 
             gap: 15px;
         }
-        
         .card-header h3 { 
             margin: 0; 
             font-size: 1.4em; 
@@ -455,11 +408,9 @@
             position: relative;
             transition: all 0.2s ease;
         }
-        
         .card-header h3:hover {
             color: var(--primary-color);
         }
-        
         .status-badge { 
             padding: 6px 12px; 
             border-radius: var(--radius-sm); 
@@ -472,17 +423,14 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: all 0.2s ease;
         }
-        
         .status-badge.status-в-работе { background-color: hsl(200, 70%, 55%); }
         .status-badge.status-завершено { background-color: var(--accent-color); }
         .status-badge.status-на-паузе { background-color: hsl(0, 70%, 65%); }
         .status-badge.status-на-проверке { background-color: hsl(40, 90%, 65%); }
-        
         .card-body { 
             flex-grow: 1; 
             margin-bottom: 15px; 
         }
-        
         .card-body p { 
             margin: 10px 0; 
             font-size: 0.9em; 
@@ -490,13 +438,11 @@
             display: flex; 
             align-items: center; 
         }
-        
         .card-body strong { 
             color: var(--text-heading); 
             font-weight: 600; 
             margin-right: 5px;
         }
-        
         .card-body p i { 
             margin-right: 12px; 
             color: var(--primary-color); 
@@ -504,7 +450,6 @@
             text-align: center; 
             font-size: 1.1em; 
         }
-        
         .card-body p a { 
             color: var(--primary-color); 
             text-decoration: none; 
@@ -513,12 +458,10 @@
             position: relative;
             padding-bottom: 2px;
         }
-        
         .card-body p a:hover { 
             color: var(--primary-color-dark); 
             text-decoration: underline; 
         }
-        
         .card-body p a::after {
             content: '';
             position: absolute;
@@ -529,11 +472,9 @@
             background: var(--primary-color-dark);
             transition: width 0.3s ease;
         }
-        
         .card-body p a:hover::after {
             width: 100%;
         }
-        
         .card-footer { 
             margin-top: auto; 
             padding-top: 20px; 
@@ -544,7 +485,6 @@
             flex-wrap: wrap; 
             gap: 15px;
         }
-        
         .card-footer .priority {
             padding: 4px 10px;
             border-radius: var(--radius-sm);
@@ -555,18 +495,15 @@
             border: 1px solid var(--border-color);
             transition: all 0.2s ease;
         }
-        
         .card-footer .priority:hover {
             background-color: hsl(var(--primary-hue), 15%, 90%);
             transform: scale(1.05);
         }
-        
         .action-buttons { 
             display: flex; 
             gap: 8px; 
             position: relative;
         }
-        
         .action-buttons button { 
             background: none; 
             border: none; 
@@ -580,44 +517,35 @@
             position: relative;
             overflow: hidden;
         }
-        
         .action-buttons button.visible { 
             display: block; 
         }
-        
         .action-buttons button:hover { 
             background-color: hsl(210, 10%, 95%); 
             transform: translateY(-2px);
         }
-        
         .complete-btn { 
             color: var(--accent-color); 
             position: relative;
         } 
-        
         .complete-btn:hover { 
             color: white; 
             background-color: var(--accent-color); 
         }
-        
         .edit-btn { 
             color: hsl(210, 70%, 55%); 
         } 
-        
         .edit-btn:hover { 
             color: white; 
             background-color: hsl(210, 70%, 55%); 
         }
-        
         .delete-btn { 
             color: hsl(0, 70%, 60%); 
         } 
-        
         .delete-btn:hover { 
             color: white; 
             background-color: hsl(0, 70%, 60%); 
         }
-        
         /* Подсказки (tooltips) */
         .tooltip {
             position: absolute;
@@ -635,7 +563,6 @@
             transition: opacity 0.2s;
             margin-bottom: 5px;
         }
-        
         .tooltip::after {
             content: '';
             position: absolute;
@@ -648,11 +575,9 @@
             border-right: 5px solid transparent;
             border-top: 5px solid var(--tooltip-bg);
         }
-        
         .action-buttons button:hover .tooltip {
             opacity: 1;
         }
-        
         /* Фильтры и прочее */
         .show-completed-btn {
             background-color: var(--bg-admin-panel);
@@ -669,13 +594,11 @@
             align-items: center;
             gap: 5px;
         }
-        
         .show-completed-btn:hover {
             background-color: hsl(210, 20%, 95%);
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
         }
-        
         .filter-controls { 
             text-align: center; 
             margin-bottom: 30px; 
@@ -689,7 +612,6 @@
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow-sm);
         }
-        
         .filter-controls label { 
             font-weight: 600; 
             color: var(--text-heading); 
@@ -698,7 +620,6 @@
             align-items: center;
             gap: 5px;
         }
-        
         .filter-controls select { 
             padding: 10px 15px; 
             border: 1px solid var(--border-color); 
@@ -710,17 +631,14 @@
             color: var(--text-body);
             transition: all 0.2s ease;
         }
-        
         .filter-controls select:focus {
             border-color: var(--primary-color);
             outline: none;
             box-shadow: 0 0 0 3px hsla(var(--primary-hue), 70%, 55%, 0.2);
         }
-        
         .completed-projects-container.hidden, #app-container.hidden { 
             display: none; 
         }
-        
         /* Модальное окно для создания профиля и редактирования */
         .modal-overlay {
             position: fixed; 
@@ -737,12 +655,10 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        
         .modal-overlay.visible { 
             display: flex; 
             opacity: 1; 
         }
-        
         .modal-content {
             background: var(--bg-card); 
             padding: 40px; 
@@ -755,12 +671,10 @@
             opacity: 0;
             border: 1px solid var(--border-color);
         }
-        
         .modal-overlay.visible .modal-content { 
             transform: translateY(0); 
             opacity: 1; 
         }
-        
         .modal-content h2 { 
             margin-top: 0; 
             margin-bottom: 25px; 
@@ -768,19 +682,16 @@
             font-size: 2em; 
             text-align: center; 
         }
-        
         .modal-content p { 
             text-align: center; 
             margin-bottom: 25px; 
             color: var(--text-light); 
         }
-        
         /* Анимации */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -791,37 +702,30 @@
                 transform: translateY(0);
             }
         }
-        
         @keyframes shine {
             to {
                 transform: translateX(100%);
             }
         }
-        
         /* Адаптивность */
         @media (max-width: 768px) {
             body { 
                 padding: 15px 10px; 
             }
-            
             .container { 
                 padding: 25px 15px; 
                 border-radius: var(--radius-md); 
             }
-            
             h1 { 
                 font-size: 2.2em; 
             }
-            
             h2 { 
                 font-size: 1.8em; 
                 margin-top: 40px; 
             }
-            
             .project-list { 
                 grid-template-columns: 1fr; 
             }
-            
             .admin-controls { 
                 flex-direction: row; 
                 bottom: 15px; 
@@ -830,51 +734,42 @@
                 justify-content: center; 
                 gap: 8px;
             }
-            
             .admin-controls button { 
                 padding: 10px 12px; 
                 font-size: 0.9em; 
                 flex: 1;
                 justify-content: center;
             }
-            
             .admin-controls button span { 
                 display: none; 
             } /* Скрыть текст на мобильных */
-            
             .form-grid { 
                 grid-template-columns: 1fr; 
                 gap: 15px; 
             }
-            
             .modal-content { 
                 padding: 25px; 
                 width: 95%; 
                 border-radius: var(--radius-md); 
             }
-            
             .filter-controls { 
                 flex-direction: column; 
                 gap: 10px; 
                 padding: 15px; 
             }
-            
             .card-header h3 { 
                 font-size: 1.2em; 
             }
-            
             .card-footer {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 10px;
             }
-            
             .action-buttons {
                 justify-content: flex-end;
                 width: 100%;
             }
         }
-        
         /* Стили для пустых состояний */
         .empty-state {
             text-align: center;
@@ -884,39 +779,21 @@
             border: 1px dashed var(--border-color);
             margin: 20px 0;
         }
-        
         .empty-state i {
             font-size: 3em;
             color: var(--text-light);
             margin-bottom: 15px;
             opacity: 0.5;
         }
-        
         .empty-state h3 {
             color: var(--text-heading);
             margin-bottom: 10px;
             font-size: 1.4em;
         }
-        
         .empty-state p {
             color: var(--text-light);
             max-width: 400px;
             margin: 0 auto 20px;
-        }
-        
-        .empty-state button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-        
-        .empty-state button:hover {
-            background-color: var(--primary-color-dark);
         }
     </style>
 </head>
@@ -952,6 +829,7 @@
                 <div><label for="edit-priority"><i class="fas fa-star"></i> Приоритет</label><select id="edit-priority" required><option value="Высокий">Высокий</option><option value="Средний">Средний</option><option value="Низкий">Низкий</option></select></div>
                 <div><label for="edit-deadline"><i class="fas fa-calendar-alt"></i> Дедлайн</label><input type="date" id="edit-deadline"></div>
                 <div><label for="edit-cost"><i class="fas fa-money-bill-wave"></i> Стоимость (₽)</label><input type="text" id="edit-cost" required></div>
+                <div><label for="edit-commission"><i class="fas fa-percentage"></i> Процент вознаграждения (%)</label><input type="number" id="edit-commission" min="0" max="100" step="0.1" placeholder="33" required></div>
                 <div><label for="edit-projectLink"><i class="fas fa-link"></i> Ссылка</label><input type="text" id="edit-projectLink"></div>
                 <button type="submit" class="full-width">Сохранить изменения</button>
                 <button type="button" id="close-edit-modal-btn" class="full-width" style="background-color: hsl(210, 10%, 70%);">Отмена</button>
@@ -970,6 +848,7 @@
                 </button>
             </header>
             <div class="admin-controls">
+                <!-- Кнопка ВСЕГДА видна -->
                 <button id="show-admin-btn" title="Панель администратора"><i class="fas fa-tools"></i> <span>Панель</span></button>
                 <button id="download-btn" title="Скачать профиль"><i class="fas fa-download"></i> <span>Скачать</span></button>
                 <button id="upload-btn" title="Загрузить профиль"><i class="fas fa-upload"></i> <span>Загрузить</span></button>
@@ -991,6 +870,7 @@
                     <div><label for="priority"><i class="fas fa-star"></i> Приоритет</label><select id="priority" required><option value="Высокий">Высокий</option><option value="Средний">Средний</option><option value="Низкий">Низкий</option></select></div>
                     <div><label for="deadline"><i class="fas fa-calendar-alt"></i> Дедлайн</label><input type="date" id="deadline" required></div>
                     <div><label for="cost"><i class="fas fa-money-bill-wave"></i> Стоимость (₽)</label><input type="text" id="cost" placeholder="150000" required></div>
+                    <div><label for="commission"><i class="fas fa-percentage"></i> Процент вознаграждения (%)</label><input type="number" id="commission" min="0" max="100" step="0.1" placeholder="33" value="33" required></div>
                     <div><label for="projectLink"><i class="fas fa-link"></i> Ссылка</label><input type="text" id="projectLink" placeholder="URL-адрес"></div>
                     <button type="submit" class="full-width">Добавить задачу</button>
                 </form>
@@ -1000,8 +880,8 @@
             <div id="no-current-tasks" class="empty-state" style="display: none;">
                 <i class="fas fa-clipboard-list"></i>
                 <h3>Нет текущих задач</h3>
-                <p>Создайте свою первую задачу, чтобы начать работу</p>
-                <button id="create-first-task-btn">Создать задачу</button>
+                <p>Задачи будут отображаться здесь после их добавления администратором.</p>
+                <!-- КНОПКИ "Создать задачу" НЕТ -->
             </div>
             <div id="completed-projects-container" class="completed-projects-container hidden">
                 <h2 class="completed-heading">Выполненные проекты</h2>
@@ -1053,8 +933,7 @@
         const noCurrentTasksMessage = document.getElementById('no-current-tasks');
         const noCompletedTasksMessage = document.getElementById('no-completed-tasks');
         const themeToggle = document.getElementById('theme-toggle');
-        const createFirstTaskBtn = document.getElementById('create-first-task-btn');
-        
+
         // Глобальные переменные состояния
         let state = {
             userInfo: null,
@@ -1063,7 +942,7 @@
             isAdminLoggedIn: false,
             theme: 'light' // 'light' или 'dark'
         };
-        
+
         // --- ФУНКЦИИ УПРАВЛЕНИЯ ДАННЫМИ ---
         function loadState() {
             const savedState = localStorage.getItem('taskProfile');
@@ -1073,17 +952,15 @@
             }
             return false;
         }
-        
         function saveState() {
             localStorage.setItem('taskProfile', JSON.stringify(state));
         }
-        
+
         // --- УПРАВЛЕНИЕ ТЕМАМИ ---
         function setTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             state.theme = theme;
             saveState();
-            
             // Обновить иконку
             const themeIcon = themeToggle.querySelector('i');
             if (theme === 'dark') {
@@ -1096,19 +973,17 @@
                 themeToggle.classList.remove('dark-mode');
             }
         }
-        
         function initTheme() {
             // Проверяем сохраненную тему
             if (state.theme) {
                 setTheme(state.theme);
                 return;
             }
-            
             // Проверяем системные настройки
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             setTheme(prefersDark ? 'dark' : 'light');
         }
-        
+
         // --- РЕНДЕРИНГ И ОБНОВЛЕНИЕ UI ---
         function renderAll() {
             if (state.userInfo) {
@@ -1124,12 +999,12 @@
                 profileSetupModal.classList.add('visible');
                 appContainer.classList.add('hidden');
             }
-            
             // Обновить видимость кнопок редактирования/удаления в карточках
             document.querySelectorAll('.edit-btn').forEach(btn => btn.classList.toggle('visible', state.isAdminLoggedIn));
             document.querySelectorAll('.delete-btn').forEach(btn => btn.classList.toggle('visible', state.isAdminLoggedIn));
+            // Кнопка "Панель" ВСЕГДА видна — не скрываем её
         }
-        
+
         const toLocalISODate = (dateString) => {
             if (!dateString) return '';
             try {
@@ -1143,60 +1018,52 @@
                 return '';
             }
         }
-        
+
         // Форматирование валюты
         const formatCurrency = (value) => {
             const numericValue = parseFloat(String(value).replace(/[^\d.,]/g, '').replace(',', '.'));
             return isNaN(numericValue) ? '0 ₽' : numericValue.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB', minimumFractionDigits: 0 });
         };
-        
+
         const getStatusClass = (status) => 'status-' + status.toLowerCase().replace(/ /g, '-');
-        
+
         function calculateProgress(project) {
             if (!project.deadline) return 0;
-            
             const today = new Date();
             const deadline = new Date(project.deadline);
             const startDate = new Date(project.creationDate || today);
-            
             // Если проект уже просрочен
             if (today > deadline) return 100;
-            
             const totalDays = (deadline - startDate) / (1000 * 60 * 60 * 24);
             const elapsedDays = (today - startDate) / (1000 * 60 * 60 * 24);
-            
             // Ограничиваем от 0 до 100
             return Math.min(100, Math.max(0, Math.round((elapsedDays / totalDays) * 100)));
         }
-        
+
         function createProjectCard(project, type) {
             const isCurrent = type === 'current';
             const statusClass = getStatusClass(project.status);
             const card = document.createElement('div');
             card.className = `project-card ${statusClass}`;
             card.dataset.id = project.id;
-            
             // Добавляем дату создания для расчета прогресса
             if (isCurrent && !project.creationDate) {
                 project.creationDate = new Date().toISOString();
             }
-            
             // Рассчитываем прогресс
             const progress = isCurrent ? calculateProgress(project) : 100;
-            
             const deadlineHTML = project.deadline ? `<p><i class="fas fa-calendar-alt"></i><strong>Дедлайн:</strong> ${toLocalISODate(project.deadline)}</p>` : '';
             const completionDateHTML = project.completionDate ? `<p><i class="fas fa-calendar-check"></i><strong>Выполнено:</strong> ${new Date(project.completionDate).toLocaleDateString('ru-RU')}</p>` : '';
-            const incomeHTML = project.income ? `<p><i class="fas fa-hand-holding-dollar"></i><strong>Доход:</strong> ${formatCurrency(project.income)}</p>` : '';
+            const incomeHTML = project.income !== undefined ? `<p><i class="fas fa-hand-holding-dollar"></i><strong>Доход:</strong> ${formatCurrency(project.income)}</p>` : '';
             const priorityHTML = isCurrent && project.priority ? `<p><strong>Приоритет:</strong> <span class="priority">${project.priority}</span></p>` : '';
             const linkHTML = project.link ? `<p><i class="fas fa-link"></i><strong>Ссылка:</strong> <a href="${project.link}" target="_blank" rel="noopener noreferrer">Перейти</a></p>` : '';
-            
             // Прогресс-бар
             const progressHTML = isCurrent ? `
                 <div class="project-progress">
                     <div class="progress-bar" style="width: ${progress}%"></div>
                 </div>
             ` : '';
-            
+
             card.innerHTML = `
                 <div class="card-header">
                     <h3>${project.name}</h3>
@@ -1220,10 +1087,9 @@
                     </div>
                 </div>
             `;
-            
             return card;
         }
-        
+
         function renderCurrentProjects() {
             currentProjectListElement.innerHTML = '';
             if (state.currentProjects.length === 0) {
@@ -1233,7 +1099,7 @@
                 state.currentProjects.forEach(p => currentProjectListElement.appendChild(createProjectCard(p, 'current')));
             }
         }
-        
+
         function renderCompletedProjects() {
             const selectedMonth = monthFilter.value;
             const selectedYear = yearFilter.value;
@@ -1244,7 +1110,6 @@
                 const projectYear = completionDate.getFullYear().toString();
                 return (selectedMonth === '' || projectMonth === selectedMonth) && (selectedYear === '' || projectYear === selectedYear);
             });
-            
             completedProjectListElement.innerHTML = '';
             if (filteredProjects.length === 0) {
                 noCompletedTasksMessage.style.display = 'block';
@@ -1253,7 +1118,7 @@
                 filteredProjects.forEach(p => completedProjectListElement.appendChild(createProjectCard(p, 'completed')));
             }
         }
-        
+
         function populateYearFilter() {
             const years = new Set(state.completedProjects.map(p => new Date(p.completionDate).getFullYear()));
             yearFilter.innerHTML = '<option value="">Все</option>';
@@ -1264,7 +1129,7 @@
                 yearFilter.appendChild(option);
             });
         }
-        
+
         // --- ОБРАБОТЧИКИ СОБЫТИЙ ---
         profileSetupForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -1275,9 +1140,13 @@
             saveState();
             renderAll();
         });
-        
+
         addProjectForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            const commission = parseFloat(document.getElementById('commission').value);
+            const cost = document.getElementById('cost').value;
+            const numericCost = parseFloat(String(cost).replace(/[^\d.,]/g, '').replace(',', '.'));
+            const income = isNaN(numericCost) || isNaN(commission) ? 0 : (numericCost * commission / 100);
             const newProject = {
                 id: Date.now(),
                 orderId: document.getElementById('orderId').value,
@@ -1286,26 +1155,20 @@
                 status: document.getElementById('status').value,
                 priority: document.getElementById('priority').value,
                 deadline: document.getElementById('deadline').value,
-                cost: document.getElementById('cost').value,
+                cost: cost,
+                commission: commission,
                 link: document.getElementById('projectLink').value,
-                creationDate: new Date().toISOString() // Добавляем дату создания
+                creationDate: new Date().toISOString()
             };
             state.currentProjects.push(newProject);
             saveState();
             renderCurrentProjects();
             addProjectForm.reset();
+            document.getElementById('commission').value = '33'; // сброс на дефолт
         });
-        
-        createFirstTaskBtn.addEventListener('click', () => {
-            adminPanel.classList.add('visible');
-            showAdminBtn.innerHTML = '<i class="fas fa-user-shield"></i> <span>Админ</span>';
-            state.isAdminLoggedIn = true;
-            window.scrollTo({
-                top: document.getElementById('add-project-form').offsetTop - 100,
-                behavior: 'smooth'
-            });
-        });
-        
+
+        // УДАЛЕНО: createFirstTaskBtn
+
         showAdminBtn.addEventListener('click', () => {
             if (state.isAdminLoggedIn) {
                 adminPanel.classList.remove('visible');
@@ -1323,7 +1186,7 @@
             }
             renderAll(); // Обновляем UI, чтобы кнопки редактирования появились/исчезли
         });
-        
+
         editProfileForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const newName = document.getElementById('admin-edit-fullname').value;
@@ -1334,7 +1197,7 @@
                 alert('ФИО успешно обновлено!');
             }
         });
-        
+
         showCompletedBtn.addEventListener('click', () => {
             completedProjectsContainer.classList.toggle('hidden');
             showCompletedBtn.textContent = completedProjectsContainer.classList.contains('hidden') ? 
@@ -1343,7 +1206,7 @@
                 renderCompletedProjects();
             }
         });
-        
+
         // Делегирование событий для кнопок на карточках
         appContainer.addEventListener('click', (e) => {
             const button = e.target.closest('button');
@@ -1352,7 +1215,6 @@
             if (!card) return;
             const id = parseInt(card.dataset.id);
             const type = currentProjectListElement.contains(card) ? 'current' : 'completed';
-            
             if (button.classList.contains('delete-btn')) {
                 if(confirm('Вы уверены, что хотите удалить эту задачу?')) {
                     if (type === 'current') {
@@ -1368,7 +1230,8 @@
                 if (projectIndex !== -1) {
                     const project = state.currentProjects[projectIndex];
                     const numericCost = parseFloat(String(project.cost).replace(/[^\d.,]/g, '').replace(',', '.'));
-                    const income = isNaN(numericCost) ? 0 : (numericCost * 0.33); // Сохраняем как число
+                    const commission = project.commission || 33;
+                    const income = isNaN(numericCost) ? 0 : (numericCost * commission / 100);
                     const completedProject = { ...project, status: "Завершено", income, completionDate: new Date().toISOString() };
                     delete completedProject.priority;
                     delete completedProject.deadline;
@@ -1388,28 +1251,27 @@
                     document.getElementById('edit-clientName').value = projectData.client;
                     document.getElementById('edit-status').value = projectData.status;
                     document.getElementById('edit-cost').value = projectData.cost;
+                    document.getElementById('edit-commission').value = projectData.commission || 33;
                     document.getElementById('edit-projectLink').value = projectData.link || '';
-                    
                     const prioritySelect = document.getElementById('edit-priority');
                     const deadlineInput = document.getElementById('edit-deadline');
-                    
                     if (type === 'current') {
                         prioritySelect.value = projectData.priority || 'Средний';
                         deadlineInput.value = toLocalISODate(projectData.deadline);
                         prioritySelect.parentElement.style.display = 'block';
                         deadlineInput.parentElement.style.display = 'block';
+                        document.getElementById('edit-commission').parentElement.style.display = 'block';
                     } else {
                         prioritySelect.parentElement.style.display = 'none';
                         deadlineInput.parentElement.style.display = 'none';
+                        document.getElementById('edit-commission').parentElement.style.display = 'none';
                     }
-                    
                     editTaskModal.classList.add('visible');
                 }
             }
         });
-        
+
         closeEditModalBtn.addEventListener('click', () => editTaskModal.classList.remove('visible'));
-        
         editTaskForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const id = parseInt(document.getElementById('edit-projectId').value);
@@ -1417,7 +1279,6 @@
             const newStatus = document.getElementById('edit-status').value;
             let projectToUpdate;
             let projectIndex;
-            
             if (originalType === 'current') {
                 projectIndex = state.currentProjects.findIndex(p => p.id === id);
                 projectToUpdate = state.currentProjects[projectIndex];
@@ -1425,34 +1286,31 @@
                 projectIndex = state.completedProjects.findIndex(p => p.id === id);
                 projectToUpdate = state.completedProjects[projectIndex];
             }
-            
             if (!projectToUpdate) {
                 alert('Ошибка: задача не найдена!');
                 return;
             }
-            
             // Обновляем общие данные
             projectToUpdate.name = document.getElementById('edit-projectName').value;
             projectToUpdate.orderId = document.getElementById('edit-orderId').value;
             projectToUpdate.client = document.getElementById('edit-clientName').value;
             projectToUpdate.cost = document.getElementById('edit-cost').value;
+            projectToUpdate.commission = parseFloat(document.getElementById('edit-commission').value);
             projectToUpdate.link = document.getElementById('edit-projectLink').value;
             projectToUpdate.status = newStatus;
-            
             // Если задача в "Текущих", обновляем специфичные для нее поля
             if (originalType === 'current') {
                 projectToUpdate.priority = document.getElementById('edit-priority').value;
                 projectToUpdate.deadline = document.getElementById('edit-deadline').value;
             }
-            
             // Логика перемещения между списками, если статус изменился
             const wasCompleted = originalType === 'completed';
             const isNowCompleted = newStatus === 'Завершено';
-            
             if (!wasCompleted && isNowCompleted) {
                 // Перемещаем из текущих в завершенные
                 const numericCost = parseFloat(String(projectToUpdate.cost).replace(/[^\d.,]/g, '').replace(',', '.'));
-                projectToUpdate.income = isNaN(numericCost) ? 0 : (numericCost * 0.33);
+                const commission = projectToUpdate.commission || 33;
+                projectToUpdate.income = isNaN(numericCost) ? 0 : (numericCost * commission / 100);
                 projectToUpdate.completionDate = new Date().toISOString();
                 delete projectToUpdate.priority;
                 delete projectToUpdate.deadline;
@@ -1474,15 +1332,14 @@
                      state.completedProjects[projectIndex] = projectToUpdate;
                  }
             }
-            
             saveState();
             renderAll();
             editTaskModal.classList.remove('visible');
         });
-        
+
         monthFilter.addEventListener('change', renderCompletedProjects);
         yearFilter.addEventListener('change', renderCompletedProjects);
-        
+
         // --- ЗАГРУЗКА И ВЫГРУЗКА ПРОФИЛЯ ---
         downloadBtn.addEventListener('click', () => {
             if (!state.userInfo) {
@@ -1498,9 +1355,8 @@
             a.click();
             URL.revokeObjectURL(url);
         });
-        
+
         uploadBtn.addEventListener('click', () => fileInput.click());
-        
         fileInput.addEventListener('change', (event) => {
             const file = event.target.files[0];
             if (!file) return;
@@ -1523,23 +1379,18 @@
             reader.readAsText(file);
             fileInput.value = '';
         });
-        
+
         // --- ПЕРЕКЛЮЧЕНИЕ ТЕМ ---
         themeToggle.addEventListener('click', () => {
             const newTheme = state.theme === 'light' ? 'dark' : 'light';
             setTheme(newTheme);
         });
-        
+
         // --- ИНИЦИАЛИЗАЦИЯ ПРИ ЗАГРУЗКЕ СТРАНИЦЫ ---
         if (!loadState()) {
-            // Если нет сохраненного состояния, показываем настройку
             profileSetupModal.classList.add('visible');
         }
-        
-        // Инициализация темы
         initTheme();
-        
-        // Рендерим все
         renderAll();
     });
     </script>
